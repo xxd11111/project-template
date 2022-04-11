@@ -1,0 +1,3 @@
+#方便演示，prod不做配置
+server:
+  port: 8081

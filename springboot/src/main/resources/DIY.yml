@@ -1,0 +1,6 @@
+music:
+  type: 1
+image:
+  type: 2
+sport:
+  type: 3

@@ -1,0 +1,15 @@
+server:
+  port: 8088
+
+spring:
+  mail:
+    host: smtp.163.com
+    username: 你的账号
+    password: 你的密码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxd.mapper.EjdcxxMapper">
+  <resultMap id="BaseResultMap" type="com.xxd.entity.Ejdcxx">
+    <result column="LSH" jdbcType="VARCHAR" property="lsh" />
+    <result column="XH" jdbcType="CHAR" property="xh" />
+    <result column="YWLX" jdbcType="CHAR" property="ywlx" />
+    <result column="YWYY" jdbcType="VARCHAR" property="ywyy" />
+    <result column="SYR" jdbcType="VARCHAR" property="syr" />
+    <result column="HPZL" jdbcType="CHAR" property="hpzl" />
+    <result column="HPHM" jdbcType="VARCHAR" property="hphm" />
+    <result column="CLPP1" jdbcType="VARCHAR" property="clpp1" />
+    <result column="CLXH" jdbcType="VARCHAR" property="clxh" />
+    <result column="CLLX" jdbcType="CHAR" property="cllx" />
+    <result column="XZQH" jdbcType="VARCHAR" property="xzqh" />
+    <result column="SQRQ" jdbcType="TIMESTAMP" property="sqrq" />
+    <result column="BJRQ" jdbcType="TIMESTAMP" property="bjrq" />
+    <result column="XYGW" jdbcType="CHAR" property="xygw" />
+    <result column="YWLC" jdbcType="VARCHAR" property="ywlc" />
+    <result column="LSZT" jdbcType="CHAR" property="lszt" />
+    <result column="GLBM" jdbcType="VARCHAR" property="glbm" />
+    <result column="FPBJ" jdbcType="CHAR" property="fpbj" />
+    <result column="FFBJ" jdbcType="CHAR" property="ffbj" />
+    <result column="RKBJ" jdbcType="CHAR" property="rkbj" />
+    <result column="CLSBDH" jdbcType="VARCHAR" property="clsbdh" />
+    <result column="BH" jdbcType="DECIMAL" property="bh" />
+    <result column="SCRY" jdbcType="VARCHAR" property="scry" />
+    <result column="SCSJ" jdbcType="TIMESTAMP" property="scsj" />
+    <result column="DACWBH" jdbcType="DECIMAL" property="dacwbh" />
+    <result column="RKSJ" jdbcType="TIMESTAMP" property="rksj" />
+    <result column="RKZT" jdbcType="CHAR" property="rkzt" />
+    <result column="RKRY" jdbcType="VARCHAR" property="rkry" />
+    <result column="DAKBH" jdbcType="VARCHAR" property="dakbh" />
+    <result column="YWFLBH" jdbcType="DECIMAL" property="ywflbh" />
+    <result column="BMBH" jdbcType="VARCHAR" property="bmbh" />
+    <result column="YWZLBH" jdbcType="DECIMAL" property="ywzlbh" />
+    <result column="GXSJ" jdbcType="TIMESTAMP" property="gxsj" />
+    <result column="XTDABH" jdbcType="VARCHAR" property="xtdabh" />
+    <result column="DAZT" jdbcType="CHAR" property="dazt" />
+    <result column="SMRY" jdbcType="VARCHAR" property="smry" />
+    <result column="SMSJ" jdbcType="TIMESTAMP" property="smsj" />
+    <result column="SHSJ" jdbcType="TIMESTAMP" property="shsj" />
+    <result column="SHRY" jdbcType="VARCHAR" property="shry" />
+    <result column="GXRY" jdbcType="VARCHAR" property="gxry" />
+    <result column="DABBH" jdbcType="DECIMAL" property="dabbh" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xxd.entity.Ejdcxx">
+    insert into E_JDCXX (LSH, XH, YWLX, YWYY, 
+      SYR, HPZL, HPHM, CLPP1, 
+      CLXH, CLLX, XZQH, SQRQ, 
+      BJRQ, XYGW, YWLC, LSZT, 
+      GLBM, FPBJ, FFBJ, RKBJ, 
+      CLSBDH, BH, SCRY, SCSJ, 
+      DACWBH, RKSJ, RKZT, 
+      RKRY, DAKBH, YWFLBH, 
+      BMBH, YWZLBH, GXSJ, 
+      XTDABH, DAZT, SMRY, SMSJ, 
+      SHSJ, SHRY, GXRY, 
+      DABBH)
+    values (#{lsh,jdbcType=VARCHAR}, #{xh,jdbcType=CHAR}, #{ywlx,jdbcType=CHAR}, #{ywyy,jdbcType=VARCHAR}, 
+      #{syr,jdbcType=VARCHAR}, #{hpzl,jdbcType=CHAR}, #{hphm,jdbcType=VARCHAR}, #{clpp1,jdbcType=VARCHAR}, 
+      #{clxh,jdbcType=VARCHAR}, #{cllx,jdbcType=CHAR}, #{xzqh,jdbcType=VARCHAR}, #{sqrq,jdbcType=TIMESTAMP}, 
+      #{bjrq,jdbcType=TIMESTAMP}, #{xygw,jdbcType=CHAR}, #{ywlc,jdbcType=VARCHAR}, #{lszt,jdbcType=CHAR}, 
+      #{glbm,jdbcType=VARCHAR}, #{fpbj,jdbcType=CHAR}, #{ffbj,jdbcType=CHAR}, #{rkbj,jdbcType=CHAR}, 
+      #{clsbdh,jdbcType=VARCHAR}, #{bh,jdbcType=DECIMAL}, #{scry,jdbcType=VARCHAR}, #{scsj,jdbcType=TIMESTAMP}, 
+      #{dacwbh,jdbcType=DECIMAL}, #{rksj,jdbcType=TIMESTAMP}, #{rkzt,jdbcType=CHAR}, 
+      #{rkry,jdbcType=VARCHAR}, #{dakbh,jdbcType=VARCHAR}, #{ywflbh,jdbcType=DECIMAL}, 
+      #{bmbh,jdbcType=VARCHAR}, #{ywzlbh,jdbcType=DECIMAL}, #{gxsj,jdbcType=TIMESTAMP}, 
+      #{xtdabh,jdbcType=VARCHAR}, #{dazt,jdbcType=CHAR}, #{smry,jdbcType=VARCHAR}, #{smsj,jdbcType=TIMESTAMP}, 
+      #{shsj,jdbcType=TIMESTAMP}, #{shry,jdbcType=VARCHAR}, #{gxry,jdbcType=VARCHAR}, 
+      #{dabbh,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xxd.entity.Ejdcxx">
+    insert into E_JDCXX
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="lsh != null">
+        LSH,
+      </if>
+      <if test="xh != null">
+        XH,
+      </if>
+      <if test="ywlx != null">
+        YWLX,
+      </if>
+      <if test="ywyy != null">
+        YWYY,
+      </if>
+      <if test="syr != null">
+        SYR,
+      </if>
+      <if test="hpzl != null">
+        HPZL,
+      </if>
+      <if test="hphm != null">
+        HPHM,
+      </if>
+      <if test="clpp1 != null">
+        CLPP1,
+      </if>
+      <if test="clxh != null">
+        CLXH,
+      </if>
+      <if test="cllx != null">
+        CLLX,
+      </if>
+      <if test="xzqh != null">
+        XZQH,
+      </if>
+      <if test="sqrq != null">
+        SQRQ,
+      </if>
+      <if test="bjrq != null">
+        BJRQ,
+      </if>
+      <if test="xygw != null">
+        XYGW,
+      </if>
+      <if test="ywlc != null">
+        YWLC,
+      </if>
+      <if test="lszt != null">
+        LSZT,
+      </if>
+      <if test="glbm != null">
+        GLBM,
+      </if>
+      <if test="fpbj != null">
+        FPBJ,
+      </if>
+      <if test="ffbj != null">
+        FFBJ,
+      </if>
+      <if test="rkbj != null">
+        RKBJ,
+      </if>
+      <if test="clsbdh != null">
+        CLSBDH,
+      </if>
+      <if test="bh != null">
+        BH,
+      </if>
+      <if test="scry != null">
+        SCRY,
+      </if>
+      <if test="scsj != null">
+        SCSJ,
+      </if>
+      <if test="dacwbh != null">
+        DACWBH,
+      </if>
+      <if test="rksj != null">
+        RKSJ,
+      </if>
+      <if test="rkzt != null">
+        RKZT,
+      </if>
+      <if test="rkry != null">
+        RKRY,
+      </if>
+      <if test="dakbh != null">
+        DAKBH,
+      </if>
+      <if test="ywflbh != null">
+        YWFLBH,
+      </if>
+      <if test="bmbh != null">
+        BMBH,
+      </if>
+      <if test="ywzlbh != null">
+        YWZLBH,
+      </if>
+      <if test="gxsj != null">
+        GXSJ,
+      </if>
+      <if test="xtdabh != null">
+        XTDABH,
+      </if>
+      <if test="dazt != null">
+        DAZT,
+      </if>
+      <if test="smry != null">
+        SMRY,
+      </if>
+      <if test="smsj != null">
+        SMSJ,
+      </if>
+      <if test="shsj != null">
+        SHSJ,
+      </if>
+      <if test="shry != null">
+        SHRY,
+      </if>
+      <if test="gxry != null">
+        GXRY,
+      </if>
+      <if test="dabbh != null">
+        DABBH,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="lsh != null">
+        #{lsh,jdbcType=VARCHAR},
+      </if>
+      <if test="xh != null">
+        #{xh,jdbcType=CHAR},
+      </if>
+      <if test="ywlx != null">
+        #{ywlx,jdbcType=CHAR},
+      </if>
+      <if test="ywyy != null">
+        #{ywyy,jdbcType=VARCHAR},
+      </if>
+      <if test="syr != null">
+        #{syr,jdbcType=VARCHAR},
+      </if>
+      <if test="hpzl != null">
+        #{hpzl,jdbcType=CHAR},
+      </if>
+      <if test="hphm != null">
+        #{hphm,jdbcType=VARCHAR},
+      </if>
+      <if test="clpp1 != null">
+        #{clpp1,jdbcType=VARCHAR},
+      </if>
+      <if test="clxh != null">
+        #{clxh,jdbcType=VARCHAR},
+      </if>
+      <if test="cllx != null">
+        #{cllx,jdbcType=CHAR},
+      </if>
+      <if test="xzqh != null">
+        #{xzqh,jdbcType=VARCHAR},
+      </if>
+      <if test="sqrq != null">
+        #{sqrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bjrq != null">
+        #{bjrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xygw != null">
+        #{xygw,jdbcType=CHAR},
+      </if>
+      <if test="ywlc != null">
+        #{ywlc,jdbcType=VARCHAR},
+      </if>
+      <if test="lszt != null">
+        #{lszt,jdbcType=CHAR},
+      </if>
+      <if test="glbm != null">
+        #{glbm,jdbcType=VARCHAR},
+      </if>
+      <if test="fpbj != null">
+        #{fpbj,jdbcType=CHAR},
+      </if>
+      <if test="ffbj != null">
+        #{ffbj,jdbcType=CHAR},
+      </if>
+      <if test="rkbj != null">
+        #{rkbj,jdbcType=CHAR},
+      </if>
+      <if test="clsbdh != null">
+        #{clsbdh,jdbcType=VARCHAR},
+      </if>
+      <if test="bh != null">
+        #{bh,jdbcType=DECIMAL},
+      </if>
+      <if test="scry != null">
+        #{scry,jdbcType=VARCHAR},
+      </if>
+      <if test="scsj != null">
+        #{scsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dacwbh != null">
+        #{dacwbh,jdbcType=DECIMAL},
+      </if>
+      <if test="rksj != null">
+        #{rksj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rkzt != null">
+        #{rkzt,jdbcType=CHAR},
+      </if>
+      <if test="rkry != null">
+        #{rkry,jdbcType=VARCHAR},
+      </if>
+      <if test="dakbh != null">
+        #{dakbh,jdbcType=VARCHAR},
+      </if>
+      <if test="ywflbh != null">
+        #{ywflbh,jdbcType=DECIMAL},
+      </if>
+      <if test="bmbh != null">
+        #{bmbh,jdbcType=VARCHAR},
+      </if>
+      <if test="ywzlbh != null">
+        #{ywzlbh,jdbcType=DECIMAL},
+      </if>
+      <if test="gxsj != null">
+        #{gxsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xtdabh != null">
+        #{xtdabh,jdbcType=VARCHAR},
+      </if>
+      <if test="dazt != null">
+        #{dazt,jdbcType=CHAR},
+      </if>
+      <if test="smry != null">
+        #{smry,jdbcType=VARCHAR},
+      </if>
+      <if test="smsj != null">
+        #{smsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shsj != null">
+        #{shsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shry != null">
+        #{shry,jdbcType=VARCHAR},
+      </if>
+      <if test="gxry != null">
+        #{gxry,jdbcType=VARCHAR},
+      </if>
+      <if test="dabbh != null">
+        #{dabbh,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

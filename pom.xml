@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>project-template</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--公共配置-->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>springboot</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-mybatisplus</module>
+        <module>springboot-shiro</module>
+        <module>springboot-security</module>
+        <module>springboot-redis</module>
+        <module>springboot-swagger2</module>
+        <module>springboot-thymeleaf</module>
+        <module>springboot-war</module>
+        <module>springboot-json</module>
+        <module>springboot-log</module>
+        <module>springboot-kafka</module>
+        <module>springboot-docker</module>
+        <module>springboot-kafka</module>
+        <module>springboot-docker</module>
+        <module>springboot-actuator</module>
+        <module>springboot-validator</module>
+        <module>springboot-admin</module>
+        <module>springboot-batch</module>
+        <module>springboot-admin</module>
+        <module>springboot-batch</module>
+        <module>springboot-batch</module>
+        <module>springboot-poi</module>
+        <module>springboot-email</module>
+        <module>springboot-websocket</module>
+        <module>springboot-webflux</module>
+        <module>springboot-ehcache</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!--web应用-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--开启测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- aop依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

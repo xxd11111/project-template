@@ -1,0 +1,80 @@
+@PointCut 表达式详解
+    PointCut：切入点，指哪些方法需要被执行AOP，PointCut表达式可以有一下几种方式
+    execution
+    execution(表达式)
+
+    表达式：访问修饰符 返回值 包名.包名.包名…类名.方法名(参数列表)
+    标准的表达式写法范例：
+    public void com.aismall.testaop.controller.HelloController.helloAop()
+
+    访问修饰符可以省略
+    void com.aismall.testaop.controller.HelloController.helloAop()
+
+    返回值可以使用通配符*，表示任意返回值
+    * com.aismall.testaop.controller.HelloController.helloAop()
+
+    包名可以使用通配符，表示任意包，但是有几级包，就需要写几个*.
+    * *.*.*.*.HelloController.helloAop()
+
+    包名可以使用...表示当前包及其子包
+    * *...HelloController.helloAop()
+
+    类名和方法名都可以使用*来实现通配
+    * *..*.*()
+
+    参数列表：
+
+    可以直接写数据类型：
+
+    基本类型直接写名称 ：例如，int
+
+    引用类型写包名.类名的方式 ：例如，java.lang.String
+
+    可以使用通配符*表示任意类型，但是必须有参数
+
+    可以使用…表示有无参数均可，有参数可以是任意类型
+
+    全通配写法:* *..*.*(...)
+
+    within
+    within(表达式)：是用来指定类型的，指定类型中的所有方法将被拦截
+
+    表达式：包名.包名.包名…类名
+    标准的表达式写法范例：
+    com.aismall.testaop.controller.HelloController
+
+    举例：匹配HelloController类对应对象的所有方法，并且只能是HelloController的对象，不能是它的子对象。
+    within(com.aismall.testaop.controller.HelloController)
+
+    也可以使用通配符*：匹配com.aismall包及其子包下面的所有类的所有方法。
+    within(com.aismall…*)
+
+    this
+    SpringAOP是基于代理的，this就代表代理对象，语法是this(type)，当生成的代理对象可以转化为type指定的类型时表示匹配。
+
+    this(com.aismall.testaop.controller.HelloController)匹配生成的代理对象是HelloController类型的所有方法的外部调用
+
+    target
+    SpringAOP是基于代理的，target表示被代理的目标对象，当被代理的目标对象可以转换为指定的类型时则表示匹配。
+    target(com.aismall.testaop.controller.HelloController) 匹配所有被代理的目标对象能够转化成HelloController类型的所有方法的外部调用。
+    args:
+    args用来匹配方法参数
+
+    args() 匹配不带参数的方法
+    args(java.lang.String) 匹配方法参数是String类型的
+    args(…) 带任意参数的方法
+    args(java.lang.String,…) 匹配第一个参数是String类型的，其他参数任意。最后一个参数是String的同理。
+
+@annotation:
+    带有相应注解的方法，比如对标有@Transactional注解的方法进行增强
+
+    @annotation(org.springframework.transaction.annotation.Transactional)
+
+    @within和@target针对类的注解
+
+    @annotation针对方法的注解
+
+@args:
+    参数带有相应标注的任意方法，比如@Transactional
+
+    @args(org.springframework.transaction.annotation.Transactional)
