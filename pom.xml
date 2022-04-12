@@ -19,7 +19,7 @@
     </parent>
 
     <modules>
-        <module>springboot</module>
+        <module>1-springboot</module>
         <module>springboot-mybatis</module>
         <module>springboot-mybatisplus</module>
         <module>springboot-shiro</module>
