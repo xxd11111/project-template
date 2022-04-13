@@ -20,16 +20,16 @@
 
     <modules>
         <module>1-springboot</module>
-        <module>springboot-mybatis</module>
-        <module>springboot-mybatisplus</module>
-        <module>springboot-shiro</module>
-        <module>springboot-security</module>
+        <module>2-springboot-mybatis</module>
+        <module>3-springboot-mybatisplus</module>
+        <module>5-springboot-shiro</module>
+        <module>4-springboot-security</module>
         <module>springboot-redis</module>
-        <module>springboot-swagger2</module>
+        <module>8-springboot-swagger2</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-war</module>
-        <module>springboot-json</module>
-        <module>springboot-log</module>
+        <module>7-springboot-json</module>
+        <module>6-springboot-log</module>
         <module>springboot-kafka</module>
         <module>springboot-docker</module>
         <module>springboot-kafka</module>
@@ -46,6 +46,7 @@
         <module>springboot-websocket</module>
         <module>springboot-webflux</module>
         <module>springboot-ehcache</module>
+        <module>20-springboot-rocketmq</module>
     </modules>
 
     <properties>
