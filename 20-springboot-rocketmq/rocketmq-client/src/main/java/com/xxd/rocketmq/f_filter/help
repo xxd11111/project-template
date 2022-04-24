@@ -1,0 +1,15 @@
+SQL过滤表达式中支持多种常量类型与运算符。
+
+支持的常量类型：
+数值：比如：123，3.1415
+字符：必须用单引号包裹起来，比如：'abc'
+布尔：TRUE 或 FALSE NULL：特殊的常量，表示空
+
+支持的运算符有：
+数值比较：>，>=，<，<=，BETWEEN，=
+字符比较：=，<>，IN
+逻辑运算 ：AND，OR，NOT NULL判断：IS NULL 或者 IS NOT NULL
+
+默认情况下Broker没有开启消息的SQL过滤功能，需要在Broker加载的配置文件中添加如下属性，以开启该功能：
+在启动Broker时需要指定这个修改过的配置文件。例如对于单机Broker的启动，其修改的配置文件是
+conf/broker.conf，启动时使用如下命令：sh bin/mqbroker -n localhost:9876 -c conf/broker.conf &
