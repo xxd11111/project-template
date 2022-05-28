@@ -19,34 +19,32 @@
     </parent>
 
     <modules>
-        <module>1-springboot</module>
-        <module>2-springboot-mybatis</module>
-        <module>3-springboot-mybatisplus</module>
-        <module>5-springboot-shiro</module>
-        <module>4-springboot-security</module>
-        <module>springboot-redis</module>
-        <module>8-springboot-swagger2</module>
-        <module>springboot-thymeleaf</module>
-        <module>springboot-war</module>
-        <module>7-springboot-json</module>
-        <module>6-springboot-log</module>
-        <module>springboot-kafka</module>
-        <module>springboot-docker</module>
-        <module>springboot-kafka</module>
-        <module>springboot-docker</module>
-        <module>springboot-actuator</module>
-        <module>springboot-validator</module>
-        <module>springboot-admin</module>
-        <module>springboot-batch</module>
-        <module>springboot-admin</module>
-        <module>springboot-batch</module>
-        <module>springboot-batch</module>
-        <module>springboot-poi</module>
-        <module>springboot-email</module>
-        <module>springboot-websocket</module>
-        <module>springboot-webflux</module>
-        <module>springboot-ehcache</module>
+        <module>01-springboot</module>
+        <module>02-springboot-mybatis</module>
+        <module>03-springboot-mybatisplus</module>
+        <module>05-springboot-shiro</module>
+        <module>04-springboot-security</module>
+        <module>23-springboot-redis</module>
+        <module>08-springboot-swagger2</module>
+        <module>09-springboot-thymeleaf</module>
+        <module>11-springboot-war</module>
+        <module>07-springboot-json</module>
+        <module>06-springboot-log</module>
+        <module>21-springboot-kafka</module>
+        <module>13-springboot-docker</module>
+        <module>16-springboot-actuator</module>
+        <module>10-springboot-validator</module>
+        <module>17-springboot-admin</module>
+        <module>18-springboot-batch</module>
+        <module>14-springboot-poi</module>
+        <module>19-springboot-email</module>
+        <module>15-springboot-websocket</module>
+        <module>12-springboot-webflux</module>
+        <module>22-springboot-ehcache</module>
         <module>20-springboot-rocketmq</module>
+        <module>24-springboot-elasticsearch</module>
+        <module>24-springboot-elasticsearch/elasticsearch-client</module>
+        <module>25-springboot-webservice</module>
     </modules>
 
     <properties>
@@ -73,6 +71,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- lombok插件 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- hutool工具包  -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.0.M4</version>
         </dependency>
     </dependencies>
 

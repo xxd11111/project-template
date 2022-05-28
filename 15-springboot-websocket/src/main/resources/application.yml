@@ -1,0 +1,15 @@
+#切换配置文件
+spring:
+  profiles:
+#    active: prod
+#    active: dev
+  mvc:
+#    static-path-pattern: classpath:/static/**
+    view:
+      suffix: ".html"
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
